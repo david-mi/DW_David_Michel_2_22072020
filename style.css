@@ -10,11 +10,10 @@
 body
 {
     font-family: "Raleway";
-    height: 100vh;
     max-width: 1060px;
     font-weight: 400;
     font-size: 0.8rem;
-    margin: auto;
+    margin: 20px auto;
 }
 
 /* body, header, main, section, footer{border: 1px black solid;}
@@ -67,13 +66,10 @@ header li a {
     color: black; 
 }
 
-
-
-/* --------------MAIN */
-
 /*----- NAV */
 
 nav {padding: 0px 10px}
+nav p.description { margin: 5px 0px 15px 0px; }
 
 /* FORM */
 
@@ -82,23 +78,18 @@ nav {padding: 0px 10px}
     justify-content: flex-start;
     align-items: center;    
 }
-input, .search_form_button{ padding: 10px;}
-
 .icon_localisation{
     background-color: var(--grey-res);
     border-radius: 10px 0px 0px 10px;
     padding: 12.5px
 }
-
+form input {border: 1px solid var(--grey-res);}
+form input, .search_form_button { padding: 10px; }
 ::placeholder, .search_form_button {
     font-size: 0.8rem;
     font-weight: 600;
 }
-
-form input {border: 1px solid var(--grey-res);}
-
 ::placeholder { color: black; }
-
 .search_form_button{
     background-color: var(--blue-res);
     color: white;
@@ -107,26 +98,35 @@ form input {border: 1px solid var(--grey-res);}
     /* Pour supprimer l'espace qu'il y a par défaut entre le formulaire et le bouton rechercher*/
     position: relative;
     right: 4px; 
-}   /* ///////////////////////////////////*/
+    /* Pour supprimer l'espace qu'il y a par défaut entre le formulaire et le bouton rechercher*/
+}   
 
 /* FILTERS */
 
-.search_buttons
-{
+.search_buttons{
     display: flex;
     margin: 20px 0px;
     align-items: center;
 }
-
-ul.ul_filter_buttons
-{
+.search_buttons ul{
     display: flex;
     align-items: center;
     margin: 0px;
     padding: 0px;
 }
-
-.ul_filter_buttons h3{
+#filter_first_li {border: 0px;}
+.search_buttons li .fas {
+    padding: 10px;
+    color: var(--blue-res);
+    background-color: var(--blue-light-res);
+    border-radius: 50%;
+    font-size: 1rem;
+    /* pour effacer la bordure gauche grise */
+    position: absolute; 
+     left:-2px;  
+    /* pour effacer la bordure gauche grise */
+}
+.search_buttons_title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,29 +138,7 @@ ul.ul_filter_buttons
     width: auto;
     height: 32px; 
 }
-
-#filter_first_li {border: 0px;}
-
-.ul_filter_buttons .fas 
-{
-    padding: 10px;
-    color: var(--blue-res);
-    background-color: var(--blue-light-res);
-    border-radius: 50%;
-    font-size: 1rem;
-    /* pour effacer la bordure gauche grise */
-    position: absolute; 
-     left:-2px;  
-    /* pour effacer la bordure gauche grise */
-}
-
-.search p
-{
-    margin: 30px 0px;
-}
-
-.fa-info
-{
+.info_icon{
     padding: 5px;
     border: 1px solid var(--blue-light-res);
     border-radius: 50%;
@@ -168,22 +146,21 @@ ul.ul_filter_buttons
     font-size: 0.6rem;
     margin-right: 8px;
 }
+nav p.info_text { margin: 30px 0px; }
 
+/* HOSTINGS + ASIDE */
 
-.container_hosting-aside
-{
+.container_hosting-popular{
     display: flex;
     flex-wrap: wrap-reverse;
     margin-bottom: 30px;
-   
-    
 }
 
 /* HOSTING */
 
-section#Hosting{
+#hosting_container{
     background-color: var(--grey-res);
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
@@ -192,18 +169,13 @@ section#Hosting{
     padding: 0 30px 30px 0; /*complète le margin haut et gauche des items */
     margin-right: 30px;
     box-sizing: border-box; /*pour simplifier les calculs en incluant 
-                            les paddings et les bordures dans la taille du container*/
-    
+                            les paddings et les bordures dans la taille du container*/ 
 }
-
-section#Hosting h2
-{
+.hosting_title{
     width: 100%;
     margin: 30px 0px 0px 30px; /*complète le margin droit et bas du container*/
 }
-
-.hosting_items
-{
+.hosting_items{
     width: 200px;
     height: 170px;
     overflow: hidden;
@@ -217,39 +189,30 @@ section#Hosting h2
     box-sizing: border-box; /*pour simplifier les calculs en incluant 
                             les paddings et les bordures dans la taille du container*/
 }
-img.hosting
-{
+.hosting_items img{
     border-radius: 10px 10px 0px 0px;
     object-fit: cover;
     width: 100%;
     height: 100px;
-
 }
+.hosting_items_infos{ padding: 5px; }
 
-.hosting_items_infos
-{
-    padding: 5px;
-   
-}
+/* POPULAR */
 
-/* ASIDE */
-
-aside{
+.popular_container{
     background-color: var(--grey-res);
     flex-grow: 2;
     max-width: 310px;
     padding: 0 30px 30px 0; 
+    border-radius: 20px;
     box-sizing: border-box; /*pour simplifier les calculs en incluant 
                             les paddings et les bordures dans la taille du container*/
-    
 }
-
-aside h2
-{
+.popular_title{
     width: 100%;
     margin: 30px 0px 0px 30px;
 }
-aside .hosting_items
+.popular_items
 {
     width: 250px;
     height: 110px;
@@ -262,30 +225,23 @@ aside .hosting_items
     box-sizing: border-box; /*pour simplifier les calculs en incluant 
                             les paddings et les bordures dans la taille du container*/
 }
-
-.aside_items_infos
-{
-    width: 140px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 5px 0px 5px 10px;
-    
-}
-
-
-aside img.hosting
-{
+.popular_items img{
     object-fit: cover;
     width: 90px;
     height: 100%;
     border-radius: 10px 0px 0px 10px;
 }
- 
+.popular_items_info{
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0px 5px 10px;
+}
 
 /* FOOTER */
 
-footer {
+.footer_container {
     background-color: var(--grey-res);
     display: flex;
     align-items: flex-start;
@@ -293,8 +249,14 @@ footer {
     margin: 0 -40px;
     padding: 0 40px;
 }
-footer section {flex-grow: 1;}
-footer ul{padding: 0px; flex-grow: 1;}
-footer li h3{padding-bottom: 15px; }
-footer li {margin-bottom: 10px; font-weight: initial;}
+.footer_item {flex-grow: 1;}
+footer ul{
+    padding: 0px; 
+    flex-grow: 1;
+}
+.footer_li_title{padding-bottom: 15px; }
+footer li {
+    margin-bottom: 10px; 
+    font-weight: initial;
+}
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Reservia</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css"> 
         <form method="post" action="traitement.php">
         <script src="https://kit.fontawesome.com/d85eb10b10.js" crossorigin="anonymous"></script>
@@ -12,8 +12,8 @@
         <header>
             <img class="logo" src="images/logo/reservia_logo.png">
             <ul class="header_ul">
-                <li><a href="#Hosting">Hébergements</a></li>
-                <li><a href="#Activities">Activités</a></li>
+                <li><a href="#hosting_container">Hébergements</a></li>
+                <li><a href="#activities_container">Activités</a></li>
                 <li>S'inscrire</li>
             </ul>
 
@@ -21,7 +21,7 @@
         <main>
             <nav class="search">
                 <h2>Trouvez votre Hébergement pour des vacances de rêve</h2>
-                <p>En plein centre ville ou en pleine nature</p>
+                <p class="description">En plein centre ville ou en pleine nature</p>
                 <div class="search_form">
                     <i class="icon_localisation fas fa-map-marker-alt"></i>
                     <table>
@@ -31,21 +31,21 @@
                 </div>
                 <div class="search_buttons">
                     <h3 id="filter_first_li">Filtres</h3>
-                    <ul class="ul_filter_buttons">
-                        <li class="li_filter_buttons"><h3><i class="filter_icon fas fa-money-bill-wave"></i>Économique</h3></li>
-                        <li class="li_filter_buttons"><h3><i class="filter_icon fas fa-child"></i>Familial</h3></li>
-                        <li class="li_filter_buttons"><h3><i class="filter_icon fas fa-heart"></i>Romantique</h3></li>
-                        <li class="li_filter_buttons"><h3><i class="filter_icon fas fa-dog"></i>Animaux autorisés</h3></li>
+                    <ul>
+                        <li><h3 class="search_buttons_title"><i class="filter_icon fas fa-money-bill-wave"></i>Économique</h3></li>
+                        <li><h3 class="search_buttons_title"><i class="filter_icon fas fa-child"></i>Familial</h3></li>
+                        <li><h3 class="search_buttons_title"><i class="filter_icon fas fa-heart"></i>Romantique</h3></li>
+                        <li><h3 class="search_buttons_title"><i class="filter_icon fas fa-dog"></i>Animaux autorisés</h3></li>
                     </ul>
                 </div>
-                <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p> 
+                <p class="info_text"><i class="info_icon fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p> 
             </nav>
-            <div class="container_hosting-aside">
+            <div class="container_hosting-popular">
 <!-- HOSTING  -->
-               <section id="Hosting">
-                    <h2>Hébergements à Marseille</h2>
+               <section id="hosting_container">
+                    <h2 class="hosting_title">Hébergements à Marseille</h2>
                     <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/auberge_cannebière_small.jpg">
+                        <img src="images/hebergements/4_small/auberge_cannebière_small.jpg">
                         <div class="hosting_items_infos">
                             <h3>Auberge La Cannebière</h3>
                             <p class="p_hosting">Nuit à partir de 25<strong class="euro">€</strong>
@@ -59,7 +59,7 @@
                         </div>    
                     </article>
                     <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/hôtel_port_small.jpg">
+                        <img src="images/hebergements/4_small/hôtel_port_small.jpg">
                         <div class="hosting_items_infos">
                             <h3>Hôtel du port</h3>
                             <p class="p_hosting">Nuit à partir de 52<strong class="euro">€</strong>
@@ -73,7 +73,7 @@
                         </div>
                     </article>
                     <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/hôtel_mouettes_small.jpg">
+                        <img src="images/hebergements/4_small/hôtel_mouettes_small.jpg">
                         <div class="hosting_items_infos">
                             <h3>Hôtel les mouettes</h3>
                             <p class="p_hosting">Nuit à partir de 76<strong class="euro">€</strong>
@@ -87,7 +87,7 @@
                         </div>
                     </article>
                     <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/hôtel_mer_small.jpg">
+                        <img src="images/hebergements/4_small/hôtel_mer_small.jpg">
                         <div class="hosting_items_infos">
                             <h3>Hôtel de la mer</h3>
                             <p class="p_hosting">Nuit à partir de 46<strong class="euro">€</strong>
@@ -101,7 +101,7 @@
                         </div>
                     </article>
                     <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/auberge_panier_small.jpg">
+                        <img src="images/hebergements/4_small/auberge_panier_small.jpg">
                         <div class="hosting_items_infos">
                             <h3>Auberge Le Panier</h3>
                             <p class="p_hosting">Nuit à partir de 23<strong class="euro">€</strong>
@@ -115,7 +115,7 @@
                         </div>
                     </article>
                     <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/hôtel_mer_small.jpg">
+                        <img src="images/hebergements/4_small/hôtel_mer_small.jpg">
                         <div class="hosting_items_infos">
                             <h3>Hôtel chez Amina</h3>
                             <p class="p_hosting">Nuit à partir de 96<strong class="euro">€</strong>
@@ -129,12 +129,12 @@
                         </div>
                     </article>
                 </section>
-<!-- ASIDE -->
-                <aside class="popular">
-                    <h2>Les plus populaires</h2>
-                    <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/hôtel_soleil_small.jpg">
-                        <div class="aside_items_infos">
+<!-- POPULAR -->
+                <aside class="popular_container">
+                    <h2 class="popular_title">Les plus populaires</h2>
+                    <article class="popular_items">
+                        <img src="images/hebergements/4_small/hôtel_soleil_small.jpg">
+                        <div class="popular_items_info">
                             <div class="nom_prix">
                                 <h3>Hôtel Le soleil du matin</h3>
                                 <p class="p_hosting">Nuit à partir de 128<strong class="euro">€</strong>
@@ -148,9 +148,9 @@
                             </div>
                         </div>
                     </article>
-                    <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/chambre_hôtes_eau.jpg">
-                        <div class="aside_items_infos">
+                    <article class="popular_items">
+                        <img src="images/hebergements/4_small/chambre_hôtes_eau.jpg">
+                        <div class="popular_items_info">
                             <div class="nom_prix">
                                 <h3>Au coeur de l'eau Chambres d'hôtes</h3>
                                 <p class="p_hosting">Nuit à partir de 71<strong class="euro">€</strong>
@@ -164,9 +164,9 @@
                             </div>
                         </div>
                     </article>
-                    <article class="hosting_items">
-                        <img class="hosting" src="images/hebergements/4_small/hôtel_bleu_blanc.jpg">
-                        <div class="aside_items_infos">
+                    <article class="popular_items">
+                        <img src="images/hebergements/4_small/hôtel_bleu_blanc.jpg">
+                        <div class="popular_items_info">
                             <div class="nom_prix">
                                 <h3>Hôtel Tout bleu et Blanc</h3>
                                 <p class="p_hosting">Nuit à partir de 68€<strong class="euro">€</strong>
@@ -182,28 +182,28 @@
                     </article>
                 </aside>
             </div>
-            <section id="activities">
+            <section id="activities_container">
+            </section>
         </main>
-        <footer>
-            <section class="about">
-                
+        <footer class="footer_container">
+            <section class="footer_item about">
                 <ul>
-                    <li><h3>A Propos</h3></li>
+                    <li><h3 class="footer_li_title">A Propos</h3></li>
                     <li>Fonctionnement du site</li>
                     <li>Condition générale de vente</li>
                     <li>Données et confidentialité</li>
                 </ul>
             </section>
-            <section class="our_hostings">
+            <section class="footer_item our_hostings">
                 <ul>
-                    <li><h3>Nos Hébergements</h3></li>
+                    <li><h3 class="footer_li_title">Nos Hébergements</h3></li>
                     <li>Charte qualité</li>
                     <li>Soumettre votre hôtel</li>
                 </ul>
             </section>
-            <section class="help">
+            <section class="footer_item help">
                 <ul>
-                    <li><h3>Assistance</h3></li>
+                    <li><h3 class="footer_li_title">Assistance</h3></li>
                     <li>Centre d'aide</li>
                     <li>Nous contacter</li>
                 </ul>
