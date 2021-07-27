@@ -11,56 +11,69 @@ body
 {
     font-family: "Raleway";
     height: 100vh;
+    max-width: 1060px;
     font-weight: 400;
     font-size: 0.8rem;
-    margin: 40px;
-    
+    margin: auto;
 }
 
 /* body, header, main, section, footer{border: 1px black solid;}
 article {border: 1px black solid;} */
 
-ul { list-style: none;}
+/* GLOBAL */
 
-h3
-{
+ul { list-style: none;}
+h2, h3 {margin: 0px}
+h3{
     font-weight: 700;
     font-size: 0.8rem;
-    margin: 0px 0px 0px 0px;
 }
 
+article{
+    background-color: white;
+    box-shadow: 0 0 5px  #7e6262;
+}
 /* .euro { position: relative; bottom: -2px; } */
 p.p_hosting { margin: 2px 0px 0px 0px; }
 
-/* ETOILES */
-.star_full {color: var(--blue-res);}
+/* STARS ICON */
 .fa-star {font-size: 0.6rem;}
+.star_full {color: var(--blue-res);}
 .star_empty { color: var(--blue-light-res); }
 
 /* HEADER */
 
-header
-{
+header{
     display: flex;
     justify-content: space-between;
+    padding: 0px 10px;
 }
-.header_ul
-{
+header .logo {
+    width: 80px; 
+    padding: 20px 0px; 
+}
+header ul{
     display: flex;
     align-items: center; 
 }
-
-.header_li
+header ul :nth-child(3)
 {
-    padding-right: 50px;
+    color: var(--blue-res);
+    font-weight: bold;
+}
+header li {padding-right: 50px;}
+header li a { 
+    text-decoration: none;
+    color: black; 
 }
 
-header .logo 
-{width: 80px; padding: 20px 0px; }
+
 
 /* --------------MAIN */
 
 /*----- NAV */
+
+nav {padding: 0px 10px}
 
 /* FORM */
 
@@ -71,7 +84,7 @@ header .logo
 }
 input, .search_form_button{ padding: 10px;}
 
-.fa-map-marker-alt{
+.icon_localisation{
     background-color: var(--grey-res);
     border-radius: 10px 0px 0px 10px;
     padding: 12.5px
@@ -89,18 +102,20 @@ form input {border: 1px solid var(--grey-res);}
 .search_form_button{
     background-color: var(--blue-res);
     color: white;
-    border-radius: 0px 10px 10px 0px;
-    /* Pour supprimer l'espace qu'il y a par défaut */
+    border: 1px solid var(--blue-res);
+    border-radius: 0px 10px 10px 0px; 
+    /* Pour supprimer l'espace qu'il y a par défaut entre le formulaire et le bouton rechercher*/
     position: relative;
-    right: 4px;
-}
+    right: 4px; 
+}   /* ///////////////////////////////////*/
 
 /* FILTERS */
 
 .search_buttons
 {
     display: flex;
-    margin-top: 20px;
+    margin: 20px 0px;
+    align-items: center;
 }
 
 ul.ul_filter_buttons
@@ -113,15 +128,18 @@ ul.ul_filter_buttons
 
 .ul_filter_buttons h3{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 20px;
     border: solid 2px var(--grey-res);
-    margin: 0 10px;
-    padding-right: 10px;
+    margin-left: 20px;
+    padding: 0px 12px 0px calc(36px + 12px);
+    position: relative;
+    width: auto;
+    height: 32px; 
 }
 
-.ul_filter_buttons li h3:first-of-type {border: 0px;}
+#filter_first_li {border: 0px;}
 
 .ul_filter_buttons .fas 
 {
@@ -130,26 +148,140 @@ ul.ul_filter_buttons
     background-color: var(--blue-light-res);
     border-radius: 50%;
     font-size: 1rem;
-    margin-right: 10px;
     /* pour effacer la bordure gauche grise */
-    position: relative;
-    right: 2px;    
+    position: absolute; 
+     left:-2px;  
+    /* pour effacer la bordure gauche grise */
+}
+
+.search p
+{
+    margin: 30px 0px;
+}
+
+.fa-info
+{
+    padding: 5px;
+    border: 1px solid var(--blue-light-res);
+    border-radius: 50%;
+    color: var(--blue-res);
+    font-size: 0.6rem;
+    margin-right: 8px;
+}
+
+
+.container_hosting-aside
+{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 30px;
+   
+    
 }
 
 /* HOSTING */
+
+section#Hosting{
+    background-color: var(--grey-res);
+    border-radius: 10px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-width: 720px;
+    padding: 0 30px 30px 0; /*complète le margin haut et gauche des items */
+    margin-right: 30px;
+    box-sizing: border-box; /*pour simplifier les calculs en incluant 
+                            les paddings et les bordures dans la taille du container*/
+    
+}
+
+section#Hosting h2
+{
+    width: 100%;
+    margin: 30px 0px 0px 30px; /*complète le margin droit et bas du container*/
+}
+
 .hosting_items
 {
     width: 200px;
+    height: 170px;
     overflow: hidden;
     padding: 4px;
     border-radius: 10px;
+    margin: 30px 0px 0px 30px; /*complète le margin droit et bas du container*/
+    flex-shrink: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /*pour simplifier les calculs en incluant 
+                            les paddings et les bordures dans la taille du container*/
 }
 img.hosting
 {
     border-radius: 10px 10px 0px 0px;
-    width: 200px;
+    object-fit: cover;
+    width: 100%;
     height: 100px;
+
 }
+
+.hosting_items_infos
+{
+    padding: 5px;
+   
+}
+
+/* ASIDE */
+
+aside{
+    background-color: var(--grey-res);
+    flex-grow: 2;
+    max-width: 310px;
+    padding: 0 30px 30px 0; 
+    box-sizing: border-box; /*pour simplifier les calculs en incluant 
+                            les paddings et les bordures dans la taille du container*/
+    
+}
+
+aside h2
+{
+    width: 100%;
+    margin: 30px 0px 0px 30px;
+}
+aside .hosting_items
+{
+    width: 250px;
+    height: 110px;
+    overflow: hidden;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 30px 0px 0px 30px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box; /*pour simplifier les calculs en incluant 
+                            les paddings et les bordures dans la taille du container*/
+}
+
+.aside_items_infos
+{
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0px 5px 10px;
+    
+}
+
+
+aside img.hosting
+{
+    object-fit: cover;
+    width: 90px;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+ 
 
 /* FOOTER */
 
