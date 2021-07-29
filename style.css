@@ -14,6 +14,7 @@ body
     font-weight: 400;
     font-size: 0.8rem;
     margin: 20px auto;
+    padding: 0px 2%;
 }
 
 /* body, header, main, section, footer{border: 1px black solid;}
@@ -23,6 +24,10 @@ article {border: 1px black solid;} */
 
 ul { list-style: none;}
 h2, h3 {margin: 0px}
+h2{
+    font-size: 1.05rem; 
+    font-weight: 700;
+}
 h3{
     font-weight: 700;
     font-size: 0.8rem;
@@ -113,6 +118,7 @@ form input, .search_form_button { padding: 10px; }
     align-items: center;
     margin: 0px;
     padding: 0px;
+    flex-wrap: wrap;
 }
 .search_buttons li
 {
@@ -152,8 +158,9 @@ nav p.info_text { margin: 30px 0px; }
 
 .container_hosting-popular{
     display: flex;
-    flex-wrap: wrap-reverse;
-    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    max-width: 1060px;
+    
 }
 
 /* HOSTING */
@@ -176,13 +183,13 @@ nav p.info_text { margin: 30px 0px; }
     margin: 30px 0px 0px 30px; /*complète le margin droit et bas du container*/
 }
 .hosting_items{
+    /* width: 200px; */
+    flex-grow: 1;
     width: 200px;
     height: 170px;
-    overflow: hidden;
     padding: 4px;
     border-radius: 10px;
     margin: 30px 0px 0px 30px; /*complète le margin droit et bas du container*/
-    flex-shrink: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -201,9 +208,12 @@ nav p.info_text { margin: 30px 0px; }
 
 .popular_container{
     background-color: var(--grey-res);
-    flex-grow: 2;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     max-width: 310px;
-    padding: 0 30px 30px 0; 
+    padding: 0px 30px 30px; 
     border-radius: 20px;
     box-sizing: border-box; /*pour simplifier les calculs en incluant 
                             les paddings et les bordures dans la taille du container*/
@@ -214,12 +224,11 @@ nav p.info_text { margin: 30px 0px; }
 }
 .popular_items
 {
-    width: 250px;
+    flex-grow: 1;
     height: 110px;
-    overflow: hidden;
     padding: 4px;
     border-radius: 10px;
-    margin: 30px 0px 0px 30px;
+    margin: 30px 0px 0px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box; /*pour simplifier les calculs en incluant 
@@ -227,7 +236,7 @@ nav p.info_text { margin: 30px 0px; }
 }
 .popular_items img{
     object-fit: cover;
-    width: 90px;
+    width: 40%;
     height: 100%;
     border-radius: 10px 0px 0px 10px;
 }
@@ -239,6 +248,76 @@ nav p.info_text { margin: 30px 0px; }
     padding: 5px 0px 5px 10px;
 }
 
+/* ACTIVITIES */
+
+#activities_container
+{   
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1060px;
+    box-sizing: border-box;
+    border: black 2px solid;
+    height: 400px;
+}
+
+.activities_items
+{   
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 200px;
+    flex-grow: 1;
+    
+}
+
+.wrapper1, .wrapper2
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper1 .activities_items:nth-of-type(1), .wrapper1 .activities_items:nth-of-type(2)
+{
+    
+    
+    height: 110px;
+    
+    
+}
+
+.wrapper2 .activities_items:nth-of-type(1), .wrapper2 .activities_items:nth-of-type(2)
+{
+    
+    
+    height: 110px;
+    
+    
+}
+
+.activities_title {
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    
+}
+
+
+.activities_items img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    flex-grow:1;
+}
+
+.activities_items_info{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+
 /* FOOTER */
 
 .footer_container {
@@ -246,6 +325,7 @@ nav p.info_text { margin: 30px 0px; }
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    
     margin: 0 -40px;
     padding: 0 40px;
 }
@@ -260,3 +340,44 @@ footer li {
     font-weight: initial;
 }
 
+@media screen and (max-width: 1000px)
+{
+    
+    .container_hosting-popular {
+        flex-wrap: wrap-reverse;
+        
+    }
+    #hosting_container {
+        
+        max-width: 100%;
+        margin: 0px;
+    }
+    .hosting_items {flex-basis: 250px;
+
+    }
+    .popular_container
+    {
+        max-width: 100%;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .popular_items
+    {
+        
+        flex-basis: 100%;
+        max-width: 80%;
+
+    }
+    
+    .popular_items img
+    { 
+        object-position: center bottom;
+    }
+
+}   
+
+@media screen and (max-width: 800px)
+{
+    .search_buttons {flex-direction: column;}
+}
