@@ -3,15 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Reservia</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="style.css"> 
         <form method="post" action="traitement.php">
         <script src="https://kit.fontawesome.com/d85eb10b10.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <img class="logo" src="images/logo/reservia_logo.png">
+            
             <ul class="header_ul">
+                <li><img class="logo" src="images/logo/Reservia.svg"></li>
                 <li><a href="#hosting_container">Hébergements</a></li>
                 <li><a href="#activities_container">Activités</a></li>
                 <li>S'inscrire</li>
@@ -20,14 +21,14 @@
         </header>
         <main>
             <nav class="search">
-                <h2>Trouvez votre Hébergement pour des vacances de rêve</h2>
+                <h1>Trouvez votre Hébergement pour des vacances de rêve</h1>
                 <p class="description">En plein centre ville ou en pleine nature</p>
                 <div class="search_form">
-                    <i class="icon_localisation fas fa-map-marker-alt"></i>
+                    <div class="icon_localisation "><i class="fas fa-map-marker-alt"></i></div>
                     <table>
-                        <input type="search" placeholder="Marseille, France"/> 
+                        <input type="search" class="chercher_lieu" placeholder="Marseille, France"/> 
                     </table>
-                    <div class="search_form_button">Rechercher</div>
+                    <div class="search_form_button"><i class="search_form_icon_button fas fa-search"></i><span>Rechercher</span></div>
                 </div>
                 <div class="search_buttons">
                     <h3 id="filter_first_li">Filtres</h3>
@@ -38,7 +39,7 @@
                         <li><i class="filter_icon fas fa-dog"></i><h3 class="search_buttons_title">Animaux autorisés</h3></li>
                     </ul>
                 </div>
-                <p class="info_text"><i class="info_icon fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p> 
+                <div class="nav_info"><i class="info_icon fas fa-info"></i><p class="info_text">Plus de 500 logements sont disponibles dans cette ville</p></div>
             </nav>
             <div class="container_hosting-popular">
 <!-- HOSTING  -->
