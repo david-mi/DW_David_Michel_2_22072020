@@ -420,7 +420,7 @@ footer li {
      .wrapper1 .activities_items, .wrapper2 .activities_items { min-width: 50%; }
      
      /* FOOTER */
-    .footer_container { margin: 30px 0px 0px 0px ; }
+    .footer_container { margin: 30px -15px 0px -15px ; }
 }
 
 @media screen and (max-width: 631px){
