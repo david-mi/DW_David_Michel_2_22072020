@@ -63,7 +63,8 @@ header ul :nth-child(1) { flex-grow:1; }
 .header_hosting, .header_activities {
     padding: 30px 20px 0px 20px;
     transition: border 100ms ease-out;
-    border-top: 3px solid var(--grey-res);
+    border-top: 3px solid white; 
+
 }
 .header_hosting:hover{ border-top: 3px solid var(--blue-res); }
 .header_activities:hover{ border-top: 3px solid var(--blue-res); }
@@ -77,10 +78,10 @@ header ul :nth-child(1) { flex-grow:1; }
 header li a { 
     text-decoration: none;
     color: black; 
-    width: 100%;
+    line-height: 50px;
 }
-header li a.subscription { color: var(--blue-res); }
-header li {            
+header ul :first-child a { max-width: 97px; } 
+header ul li {            
     height: 50px; 
     display: flex;
     align-items: center;
@@ -88,7 +89,7 @@ header li {
 
 /*----- NAV */
 nav {padding: 0px 10px}
-nav p.description { margin: 5px 0px 15px 0px; }
+nav p.description { margin: 5px 0px 25px 0px; }
 
 /* FORM */
 .search_form{
@@ -159,7 +160,7 @@ nav .search_form_icon_button {display: none;}
 }
 .search_buttons li:hover{ 
     transition: all 0.2s ease-in-out;
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 0px 0px 5px var(--blue-light-res);
 }
 #filter_first_li{
@@ -176,8 +177,7 @@ nav .search_form_icon_button {display: none;}
     left:-2px;
 }
 .search_buttons li:hover > .filter_icon{
-    transition: all 0.2s ease-in-out;
-    font-size: 1.2rem;
+    transition: all 0.4s ease-in-out;
     color: white;
     background-color:var(--blue-res);
 }
@@ -247,7 +247,7 @@ nav .search_form_icon_button {display: none;}
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    height: fit-content;
+    min-height: 100%;
     max-width: 310px;
     padding: 0px 30px 30px; 
     border-radius: 20px;
@@ -372,7 +372,10 @@ footer li {
    nav .search_form_button span {display: none}
   
    /* FILTERS */
-   nav #filter_first_li { margin-left: 20px; }
+   nav #filter_first_li { 
+       margin-left: 20px;
+       padding-top: 30px;
+     }
    nav .search_buttons {
        align-items: flex-start;
        flex-direction: column;
@@ -423,12 +426,15 @@ footer li {
     header ul :nth-child(1) {
         order: 1; 
         flex: 1 0 40%;
+        margin-right: 5px;
+        align-self: center;
     }
     header ul :nth-child(2) {
         order: 3; 
         flex: 1 0 40%; 
         margin-left: -30px; 
-        padding: 0px; text-align: center; 
+        padding: 10px 0px 0px 0px;
+        text-align: center; 
         border-bottom: 3px solid var(--grey-res);
         border-top: 0px;
     } 
@@ -444,13 +450,24 @@ footer li {
         order: 4; 
         flex: 1 0 40%; 
         margin-right: -30px; 
-        padding: 0px; 
-        text-align: center;
+        padding: 10px 0px 0px 0px; 
+        text-align: center; 
         border-top: 0px;
         border-bottom: 3px solid var(--grey-res);}
-    header ul :nth-child(4) {order: 2; flex: 1 0 40%;}
-    header ul .subscription{ text-align: right; }
-  
+    header ul :nth-child(4) {
+        order: 2; 
+        flex: 1 0 40%;
+        justify-content: flex-end;
+        margin-right: -5px
+    }
+    
+    header a.subscription {
+         max-width: 97px; 
+         text-align: right;
+         font-size: 1.2rem;
+         padding: 0px 0px 0px 0px;
+        }
+
     /* HOSTING */
     #hosting_container { 
         padding: 0px 15px 30px 0px;
@@ -503,3 +520,4 @@ footer li {
 }
 
 @media screen and (max-width: 330px) { body { min-width: 314px; } }
+
