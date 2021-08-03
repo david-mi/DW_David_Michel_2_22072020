@@ -233,6 +233,12 @@ nav .search_form_icon_button {display: none;}
     justify-content: space-between;
     box-sizing: border-box; 
 }
+.hosting_items a{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
 .hosting_items img{
     border-radius: 10px 10px 0px 0px;
     object-fit: cover;
@@ -271,6 +277,10 @@ nav .search_form_icon_button {display: none;}
     flex-direction: row;
     box-sizing: border-box; 
 }
+.popular_items a { 
+    display: flex;
+    width: 100%;
+ }
 .popular_items img{
     object-fit: cover;
     max-height: 300px;
@@ -301,6 +311,11 @@ nav .search_form_icon_button {display: none;}
     width: 100%;
     flex: 1 1 205px;
     margin: 15px; 
+}
+.activities_items a {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
 }
 .wrapper1, .wrapper2{
     display: flex;
