@@ -177,7 +177,6 @@ nav .search_form_icon_button {display: none;}
     color: var(--blue-res);
     background-color: var(--blue-light-res);
     border-radius: 50%;
-    
     position: relative;
     left:-2px;
 }
@@ -198,7 +197,8 @@ nav .search_form_icon_button {display: none;}
 }
 .info_icon_container {
     display: flex;
-    align-items: center;;
+    justify-content: centere;
+    align-items: center;
     width: 5px;
     height: 5px;
     padding: 5px;
