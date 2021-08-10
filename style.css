@@ -419,6 +419,9 @@ footer li {
         max-width: 100%;
         margin: 0px;
     }
+    /* .hosting_items img{
+        object-position: top center;
+    } */
     .hosting_items { flex-basis: 250px; }
 
     /* POPULAR */
@@ -428,7 +431,13 @@ footer li {
         justify-content: center;
     }
     .popular_items{ flex-basis: 100%; }
-    .popular_items img { width: 30% ; } 
+    .popular_items img { 
+        width: 30% ; 
+        
+    } 
+    .popular_items .hotel_bleu {
+        object-position: top center;
+    }
 
      /* ACTIVITIES */
      .activities_items {min-width: 50%;}
