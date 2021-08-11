@@ -532,7 +532,7 @@ footer li {
         border-radius: 0px;
      }
     .popular_items {max-width: 100%; }
-    .popular_items img {object-fit: center; min-width: 95px ; flex-shrink : 0;}
+    .popular_items img {object-position: center; min-width: 95px ; flex-shrink : 0;}
     article.popular_items { margin-top: 15px; }
 
     /***** NAV */
